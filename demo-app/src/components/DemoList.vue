@@ -41,7 +41,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .demo-list{
   width: 40%;
   display: flex;

@@ -11,7 +11,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .text-block{
   width: 90%;
   display: flex;

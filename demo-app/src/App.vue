@@ -1,24 +1,21 @@
 <template>
   <div id="app">
     <SiteHeader title="Demo"/>
-    <div class="content">
-    <TextBlock text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-    <DemoList/>
-    <TextBlock text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."/>
-    </div>
+    <HomePage/>
+    <AboutPage/>
   </div>
 </template>
 
 <script>
-import SiteHeader from './components/SiteHeader.vue';
-import TextBlock from './components/TextBlock.vue';
-import DemoList from './components/DemoList.vue';
+import SiteHeader from './components/SiteHeader';
+import HomePage from './vues/HomePage';
+import AboutPage from './vues/AboutPage';
 export default {
   name: 'App',
   components: {
-    SiteHeader,
-    TextBlock,
-    DemoList
+  SiteHeader,
+   HomePage,
+   AboutPage,
   }
 }
 </script>
@@ -34,5 +31,11 @@ font-family: 'Koulen', cursive;
   display:flex;
   align-items: center;
   flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .content{
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 </style>
