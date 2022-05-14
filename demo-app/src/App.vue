@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-   <SiteHeader title="Demo"/> 
-    <router-view/>
+    <SiteHeader title="Demo" />
+    <router-view />
   </div>
 </template>
 <script>
-import SiteHeader from "./components/SiteHeader.vue"
+import SiteHeader from "./components/SiteHeader.vue";
 export default {
-  name: 'App',
-  components:{
+  name: "App",
+  components: {
     SiteHeader,
-  }
-  }
+  },
+};
 </script>
 <style>
 #app {
-font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
