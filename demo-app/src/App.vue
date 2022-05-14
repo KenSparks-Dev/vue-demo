@@ -1,25 +1,18 @@
 <template>
   <div id="app">
-    <SiteHeader title="Demo"/>
-    <HomePage/>
-    <AboutPage/>
+   <SiteHeader title="Demo"/> 
+    <router-view/>
   </div>
 </template>
-
 <script>
-import SiteHeader from './components/SiteHeader';
-import HomePage from './vues/HomePage';
-import AboutPage from './vues/AboutPage';
+import SiteHeader from "./components/SiteHeader.vue"
 export default {
   name: 'App',
-  components: {
-  SiteHeader,
-   HomePage,
-   AboutPage,
+  components:{
+    SiteHeader,
   }
-}
+  }
 </script>
-
 <style>
 #app {
 font-family: 'Koulen', cursive;
@@ -27,15 +20,17 @@ font-family: 'Koulen', cursive;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-.content{
-  display:flex;
-  align-items: center;
-  flex-direction: column;
+
+nav {
+  padding: 30px;
 }
-@media (min-width: 1024px) {
-  .content{
-    width: 70%;
-    margin: 0 auto;
-  }
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

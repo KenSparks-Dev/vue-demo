@@ -17,4 +17,11 @@ export default {
   display: flex;
   margin-top: 20px;
 }
+@media (min-width: 768px) {
+  .text-block{
+    width: 60%;
+    font-size: 1.2rem;
+  }
+}
+
 </style>

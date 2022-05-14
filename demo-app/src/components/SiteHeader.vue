@@ -4,7 +4,9 @@
     <h1 class="site-title">{{title}}</h1>
     <nav>
       <ul class="pages">
-        <li v-for="page in pages" :key="page.id">{{page.title}}</li>
+        <li v-for="page in pages" :key="page.id">
+        <router-link :to="page.link">{{page.title}}</router-link> |
+        </li>
       </ul>
     </nav>
   </div>
@@ -21,13 +23,13 @@ export default {
       pages:[
         {
           id: 1,
-          title: 'About',
-          link: ''
+          title: 'Home',
+          link: '/'
         },
         {
           id: 2,
-          title: 'Contact',
-          link: ''
+          title: 'About',
+          link: '/about'
         }
       ]
     }

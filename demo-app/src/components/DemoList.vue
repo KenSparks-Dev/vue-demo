@@ -1,4 +1,3 @@
-
 <template>
 <ul class="demo-list" id="demo-list">
 <li v-for="item in items" :key="item.id">
@@ -19,6 +18,10 @@ export default {
    {
     id: 2,
     text: 'Item 2'
+  },
+  {
+    id: 3,
+    text: 'Item 3'
   }
  ]   
     }
@@ -27,14 +30,23 @@ export default {
     selectedBtn(){
 			const one = document.getElementById('1');
 			const two = document.getElementById('2');
-			
+			const three = document.getElementById('3');
+
 			one.addEventListener('click', () => {
 				one.classList.add('active');
 				two.classList.remove('active');
+        three.classList.remove('active');
 			});
 			
 			two.addEventListener('click', () => {
 				two.classList.add('active');
+				one.classList.remove('active');
+        three.classList.remove('active');
+			});
+
+      three.addEventListener('click', () => {
+				three.classList.add('active');
+        two.classList.remove('active');
 				one.classList.remove('active');
 			});
     }
